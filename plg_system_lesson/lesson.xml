@@ -18,6 +18,7 @@
 		<language tag="ru-RU">ru-RU/plg_system_lesson.sys.ini</language>
 	</languages>
 	<files>
+		<folder>forms</folder>
 		<folder>services</folder>
 		<folder plugin="lesson">src</folder>
 	</files>

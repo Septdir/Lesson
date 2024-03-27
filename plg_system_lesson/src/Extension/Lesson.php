@@ -13,6 +13,7 @@ namespace Joomla\Plugin\System\Lesson\Extension;
 
 \defined('_JEXEC') or die;
 
+use Joomla\CMS\Form\Form;
 use Joomla\CMS\MVC\Factory\MVCFactoryAwareTrait;
 use Joomla\CMS\Plugin\CMSPlugin;
 use Joomla\Database\DatabaseAwareTrait;
@@ -43,14 +44,39 @@ class Lesson extends CMSPlugin implements SubscriberInterface
 	public static function getSubscribedEvents(): array
 	{
 		return [
-			'onBeforeDisplay' => 'onBeforeDisplay'
+			'onContentPrepareForm' => 'onContentPrepareForm',
+			'onContentPrepareData' => 'onContentPrepareData',
 		];
 	}
 
-	public function onBeforeDisplay(Event $event)
+	public function onContentPrepareForm(Event $event)
 	{
-		$a = 1;
-		$b = 2;
-		$c = 3;
+		/** @var Form $form */
+		$form = $event->getArgument('0');
+		if ($form->getName() === 'com_content.article')
+		{
+			$form->loadFile(JPATH_PLUGINS . '/system/lesson/forms/com_content.article.xml');
+		}
+
+	}
+
+	public function onContentPrepareData(Event $event)
+	{
+		$context = $event->getArgument('0');
+		if ($context !== 'com_content.article')
+		{
+			return;
+		}
+
+		$data = $event->getArgument('1');
+		if (is_object($data))
+		{
+			$data->my_filed_data = 'aasdsd';
+		}
+		elseif (is_array($data))
+		{
+			$data['my_filed_data'] = 'aasdsd';
+		}
+		$event->setArgument('1', $data);
 	}
 }
