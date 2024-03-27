@@ -78,24 +78,13 @@ return new class () implements ServiceProviderInterface {
 			protected string $minimumMariaDb = '10.4.1';
 
 			/**
-			 * Minimum MariaDb version required to install the extension.
-			 *
-			 * @var  string
-			 *
-			 * @since  __DEPLOY_VERSION__
-			 */
-			protected string $minimumRadicalMart = '1.0.0';
-
-			/**
 			 * Update methods.
 			 *
 			 * @var  array
 			 *
 			 * @since  __DEPLOY_VERSION__
 			 */
-			protected array $updateMethods = [
-				'update2_0_0',
-			];
+			protected array $updateMethods = [];
 
 			/**
 			 * Constructor.

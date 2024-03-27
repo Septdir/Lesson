@@ -2,6 +2,7 @@
 <extension type="package" method="upgrade">
 	<name>PKG_LESSON</name>
 	<packagename>lesson</packagename>
+	<author>Igor Berdichevskiy</author>
 	<creationDate>March 2024</creationDate>
 	<copyright>Copyright (c) 2013 - 2024 Igor Berdicheskiy. All rights reserved.</copyright>
 	<license>https://www.gnu.org/copyleft/gpl.html GNU/GPL</license>

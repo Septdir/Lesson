@@ -1,0 +1,19 @@
+{
+	"$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
+	"name": "plg_system_lesson",
+	"version": "0.0.1-dev",
+	"description": "Lesson plugin for Joomla",
+	"license": "GPL-3.0-or-later",
+	"assets": [
+		{
+			"name": "plg_system_lesson.test",
+			"type": "script",
+			"uri": "plg_system_lesson/test.min.js",
+			"attributes": {
+				"defer": true,
+				"type": "module"
+			},
+			"version": "auto"
+		}
+	]
+}
