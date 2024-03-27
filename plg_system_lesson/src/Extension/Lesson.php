@@ -16,6 +16,7 @@ namespace Joomla\Plugin\System\Lesson\Extension;
 use Joomla\CMS\MVC\Factory\MVCFactoryAwareTrait;
 use Joomla\CMS\Plugin\CMSPlugin;
 use Joomla\Database\DatabaseAwareTrait;
+use Joomla\Event\Event;
 use Joomla\Event\SubscriberInterface;
 
 class Lesson extends CMSPlugin implements SubscriberInterface
@@ -42,6 +43,14 @@ class Lesson extends CMSPlugin implements SubscriberInterface
 	public static function getSubscribedEvents(): array
 	{
 		return [
+			'onBeforeDisplay' => 'onBeforeDisplay'
 		];
+	}
+
+	public function onBeforeDisplay(Event $event)
+	{
+		$a = 1;
+		$b = 2;
+		$c = 3;
 	}
 }
