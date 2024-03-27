@@ -71,13 +71,14 @@ class Lesson extends CMSPlugin implements SubscriberInterface
 
 		$data     = $event->getArgument('1');
 		$registry = new Registry($data);
+		$testText = 'aasdsd';
 		if (is_object($data))
 		{
-			$data->my_filed_data = 'aasdsd';
+			$data->my_filed_data = $testText;
 		}
 		elseif (is_array($data))
 		{
-			$data['my_filed_data'] = 'aasdsd';
+			$data['my_filed_data'] = $testText;
 		}
 		$event->setArgument('1', $data);
 	}
