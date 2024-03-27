@@ -19,6 +19,7 @@ use Joomla\CMS\Plugin\CMSPlugin;
 use Joomla\Database\DatabaseAwareTrait;
 use Joomla\Event\Event;
 use Joomla\Event\SubscriberInterface;
+use Joomla\Registry\Registry;
 
 class Lesson extends CMSPlugin implements SubscriberInterface
 {
@@ -68,7 +69,8 @@ class Lesson extends CMSPlugin implements SubscriberInterface
 			return;
 		}
 
-		$data = $event->getArgument('1');
+		$data     = $event->getArgument('1');
+		$registry = new Registry($data);
 		if (is_object($data))
 		{
 			$data->my_filed_data = 'aasdsd';
