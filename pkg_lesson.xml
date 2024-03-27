@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="package" method="upgrade">
+	<name>PKG_LESSON</name>
+	<packagename>lesson</packagename>
+	<creationDate>March 2024</creationDate>
+	<copyright>Copyright (c) 2013 - 2024 Igor Berdicheskiy. All rights reserved.</copyright>
+	<license>https://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>septdir@gmail.com</authorEmail>
+	<authorUrl>https://septdir.ru</authorUrl>
+	<version>0.0.1-dev</version>
+	<description>PKG_LESSON_DESCRIPTION</description>
+	<scriptfile>script.php</scriptfile>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/pkg_lesson.sys.ini</language>
+		<language tag="ru-RU">ru-RU/pkg_lesson.sys.ini</language>
+	</languages>
+	<files>
+		<folder type="plugin" group="system" id="lesson">plg_system_lesson</folder>
+	</files>
+</extension>
