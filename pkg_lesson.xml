@@ -8,7 +8,7 @@
 	<license>https://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
 	<authorEmail>septdir@gmail.com</authorEmail>
 	<authorUrl>https://septdir.ru</authorUrl>
-	<version>0.0.1-dev</version>
+	<version>0.0.3-dev</version>
 	<description>PKG_LESSON_DESCRIPTION</description>
 	<scriptfile>script.php</scriptfile>
 	<languages folder="language">
